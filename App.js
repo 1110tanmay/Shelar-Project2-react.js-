@@ -11,6 +11,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="WebViewScreen" component={WebViewScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
