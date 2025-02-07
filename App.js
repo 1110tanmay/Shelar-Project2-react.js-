@@ -8,7 +8,6 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    // The Stack Navigator is not needed here but will likely be useful during the assignment.
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />

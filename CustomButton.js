@@ -4,8 +4,6 @@ import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.8 };
 
-// Don't forget that you are welcome to customize the styles however you wish.
-// You do not need to keep the formatting provided here.
 const CustomButton = ({ onPress, title, size, backgroundColor, style, textStyle }) => (
     <TouchableOpacity
       onPress={onPress}
