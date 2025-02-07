@@ -1,8 +1,7 @@
 import React  from 'react';
 import { Alert, StyleSheet, FlatList, View } from 'react-native';
 import CustomButton from './CustomButton';
-import { WebView } from 'react-native-webview';
-
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen  = ({ navigation }) => {
 
