@@ -1,13 +1,10 @@
 import React  from 'react';
 import { Alert, StyleSheet, FlatList, View } from 'react-native';
 import CustomButton from './CustomButton';
+import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen  = ({ navigation }) => {
-
-    const handleButtonPress = (url) => {
-      navigation.navigate('WebViewScreen', {url});
-    };
   
     const [buttons, setButtons] = useState ({links:[
       { 
@@ -60,11 +57,15 @@ const HomeScreen  = ({ navigation }) => {
         textStyle: { fontFamily: 'Comic Sans MS', color: '#A1E3F9', fontSize: 16 } 
       },
     ],});
+
+    const handleButtonPress = (url) => {
+      navigation.navigate('WebViewScreen', {url});
+    };
   
     return (
       <View style={styles.container}>
         <FlatList
-          data={buttons}
+          data={buttons.links}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <CustomButton
