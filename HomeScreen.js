@@ -9,7 +9,7 @@ const HomeScreen  = ({ navigation }) => {
       navigation.navigate('WebViewScreen', {url});
     };
   
-    const buttons = [
+    const [buttons, setButtons] = useState ([
       { 
         id: '1', 
         title: 'Asia', 
@@ -59,7 +59,7 @@ const HomeScreen  = ({ navigation }) => {
         style: { backgroundColor: '#A1E3F9', borderLeftWidth: 4, borderLeftColor: '#fff' }, 
         textStyle: { fontFamily: 'Comic Sans MS', color: '#A1E3F9', fontSize: 16 } 
       },
-    ];
+    ]);
   
     return (
       <View style={styles.container}>
